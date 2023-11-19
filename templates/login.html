@@ -1,0 +1,24 @@
+{% extends './layouts/layout.html' %}
+<!-- fi -->
+{% block title %}Home{% endblock %}
+<!-- fi -->
+{% block content %}
+<div>
+  <h1>Login</h1>
+</div>
+
+<section>
+  <form method="post" action="{{ url_for ('user_index') }}">
+    <div>
+      <label for="username">Username</label>
+      <input name="username" type="text" id="username" required />
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input name="password" type="password" id="password" required />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+<!-- fi -->
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "./layouts/layout.html" %}
+<!-- fi -->
+{% block title %}Sign up{% endblock %}
+<!-- fi -->
+{% block content %}
+<div>
+  <h1>FastAPI Form</h1>
+</div>
+
+<form method="post" action="/user-processing">
+  <div>
+    <label for="firstname">First name</label>
+    <input name="first_name" type="text" id="firstname" required />
+  </div>
+  <div>
+    <label for="last_name">Last name</label>
+    <input name="last_name" type="text" id="last_name" required />
+  </div>
+  <div>
+    <label for="username">Username</label>
+    <span>@</span>
+    <input name="username" type="text" id="username" required />
+  </div>
+  <div>
+    <label for="country">Country</label>
+    <select name="country" id="country" required>
+      <option selected disabled value="">Choose...</option>
+      <option value="Argentina">Argentina</option>
+      <option value="Canada">Canada</option>
+      <option value="Colombia">Colombia</option>
+      <option value="United States">UU.EE</option>
+      <option value="Venezuela">Venezuela</option>
+    </select>
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input name="password" type="password" id="password" required />
+  </div>
+  <div>
+    <button type="submit">Send Data</button>
+  </div>
+</form>
+{% endblock %}
